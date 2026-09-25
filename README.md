@@ -129,15 +129,15 @@ The above tree is a representation of `And<Q, Or<P, R, true>>`. `true` is disjun
 
 ## Future Considerations
 
-## Compiler-backed Python frontend
+### Compiler-backed Python frontend
 
 The repository contains experimental pybind11 infrastructure for exposing C++ types to Python. However, Python values are created at runtime and therefore cannot directly instantiate arbitrary C++ template types after compilation. A future frontend could instead translate Python proof expressions into C++ source and invoke the compiler as a proof-checking backend. This would preserve the existing compile-time proof machinery while providing a more ergonomic Python interface.
 
-## Additional logical constructs
+### Additional logical constructs
 
 The current implementation focuses on a small set of propositional logic operations and theorem transformations. The type-level representation could be extended with additional connectives, inference rules, and reusable theorems.
 
-## Compile-time performance analysis
+### Compile-time performance analysis
 
 Because proof checking is performed through template instantiation, larger proposition trees could be used to investigate compilation cost. Potential experiments could include comparing GCC and Clang compile times, template-instantiation behavior, and compiler memory usage as proof complexity increases.
 
