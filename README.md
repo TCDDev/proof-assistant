@@ -84,7 +84,7 @@ The library's API is designed to model the underlying mathematics directly. Proo
 ```cpp
 struct Sunny{};
 struct Hot{};
-struct ACWorking;
+struct ACWorking{};
 
 constexpr Hot sunny_implies_hot(Sunny) {
     return {};
